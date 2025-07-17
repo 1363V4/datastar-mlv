@@ -76,6 +76,7 @@ header {
         border-radius: 1rem;
         cursor: pointer;
         img {
+            width: 100%;
             padding: .2rem;
             border-radius: 1rem;
         }
@@ -100,9 +101,22 @@ footer {
     border-radius: 3rem;
     max-width: 80dvi;
     img {
+        max-width: 100%;
         object-fit: cover;
         border-radius: 1rem;
         margin: 1rem;
+    }
+    #controls {
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        img {
+            cursor: pointer;
+            height: 1.5rem;
+            background: var(--bg);
+            border-radius: 50%;
+        }
     }
     #desc {
         gap: 3rem;
@@ -110,6 +124,25 @@ footer {
         padding-inline: 1rem;
         h1 {color: var(--primary);}
         p {text-align: left;}
+    }
+    button {
+        background: var(--bg-2);
+        &:hover {
+            color: var(--bg);
+            background: var(--primary);
+        }
+    }
+}
+
+#order {
+    background: var(--bg-2);
+    border-radius: 3rem;
+    max-width: 80dvi;
+    gap: 1rem;
+    p {
+        color: var(--primary);
+        font-style: italic;
+        text-align: left;
     }
     button {
         background: var(--bg-2);

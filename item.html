@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/css/main.css">
     <link rel="icon" type="image/png" href="static/img/logo.png">
+    <script type="module" src="/static/js/datastar.js"></script>
     <title>MLV</title>
 </head>
 <body>
@@ -22,13 +23,20 @@
     <main id="main">
         <div class="gc gq">
             <div id="full-item" class="g10 gs">
-                <img src="/static/img/logo.png">
+                <div class="gz gc gs">
+                        <div id="controls" data-signals-roll="0">
+                            <img data-on-pointerdown="$roll == 0 ? $roll = 1 : $roll = 0" src="/static/svg/left.svg">
+                            <img data-on-pointerdown="$roll == 1 ? $roll = 0 : $roll = 1" src="/static/svg/right.svg">
+                        </div> 
+                        <img data-show="!$roll" src="/static/img/logo.png">
+                        <img data-show="$roll" src="/static/img/img2.png">
+                </div>
                 <div id="desc" class="gc">
                     <h1 class="gtxxl">Voiture 1</h1>
                     <p>Description de la voiture Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil veritatis quia quos tenetur, saepe a consequatur laudantium facere pariatur autem maxime molestias, alias minima natus doloribus reprehenderit, sapiente velit dicta?</p>
                     <div class="g10 gtl">
                         <p>9.99€</p>
-                        <a href="https://checkout.revolut.com/pay/439edbe5-bda3-4616-aa07-7c2123f5514e">
+                        <a href="/order">
                             <button>Acheter</button>
                         </a>
                     </div>
